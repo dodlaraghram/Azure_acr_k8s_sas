@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app2-dotnet-deployment
+  labels:
+    app: dotnetd
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: dotnetd
+  template:
+    metadata:
+      labels:
+        app: dotnetd
+    spec:
+      containers:
+        - name: dotnetd
+          image: acrbildandpushimage.azurecr.io/welcometodotnet:v1
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dotnetd-loadbalancer-service
+  labels:
+    app: dotnetd
+spec:
+  type: LoadBalancer
+  selector:
+    app: dotnetd
+  ports:
+    - port: 80
+      targetPort: 80
