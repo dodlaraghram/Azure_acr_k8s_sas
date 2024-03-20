@@ -5,7 +5,7 @@ metadata:
   labels:
     app: dotnetd
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: dotnetd
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: dotnetd
-          image: azacrforsas.azurecr.io/welcometodotnet:v1
+          image: azacrforsas.azurecr.io/welcometodotnet
           ports:
             - containerPort: 80
         #  imagePullSecrets:
