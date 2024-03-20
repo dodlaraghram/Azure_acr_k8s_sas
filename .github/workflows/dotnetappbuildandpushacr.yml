@@ -29,7 +29,7 @@ jobs:
     - name: attaching acr to aks
       run: |
        az login 
-       az aks update -n cluster-guided-crab -g demorg-mint-dolphin --attach-acr azacrforsas 
+       az aks update -n cluster-premium-glider -g demorg-rare-pelican --attach-acr azacrforsas 
 
     - name: Build the frontend image and push it to ACR
       uses: docker/build-push-action@v5
