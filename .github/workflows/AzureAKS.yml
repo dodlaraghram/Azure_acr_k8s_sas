@@ -70,7 +70,7 @@ jobs:
    #       password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Deploy Application
         run: |
-          az aks get-credentials -n "cluster-handy-lobstercluster-decent-anemone" -g "demorg-tidy-man"
+          az aks get-credentials -n "cluster-decent-anemone" -g "demorg-tidy-man"
           kubectl apply -f ./AKSApp/demoappdeploy.yaml
           sleep 40
           
