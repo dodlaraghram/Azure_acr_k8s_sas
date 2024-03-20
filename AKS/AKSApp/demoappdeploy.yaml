@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: dotnetd
-          image: azacrforsas.azurecr.io/welcometodotnet
+          image: azacrforsas.azurecr.io/app1/imageforsas:v1
           ports:
             - containerPort: 80
         #  imagePullSecrets:
@@ -36,4 +36,4 @@ spec:
     app: dotnetd
   ports:
     - port: 80
-      targetPort: 80
+      targetPort: 5000
