@@ -32,4 +32,9 @@ jobs:
         push: true
         tags: ${{ secrets.REGISTRY_LOGIN_SERVER }}/app1/welcometodotnet:v1
         file: build/Dockerfile
+
+    - name: attaching acr to aks
+      run: |
+       az aks update -n cluster-guided-crab -g demorg-mint-dolphin --attach-acr azacrforsas 
+
         
