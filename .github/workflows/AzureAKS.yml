@@ -71,7 +71,7 @@ jobs:
    #   - name: Deploy Application
    #     run: |
    #       az aks get-credentials -n "cluster-decent-anemone" -g "demorg-tidy-man"
-   #       kubectl apply -f ./AKSApp/demoappdeploy.yaml
+   #       kubectl apply -f ./AKS/demoappdeploy.yaml
    #       sleep 40
           
           
