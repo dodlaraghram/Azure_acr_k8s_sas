@@ -21,7 +21,7 @@ terraform {
   }
    backend "azurerm" {
       resource_group_name  = "azdmoacrrg"
-      storage_account_name = "azstoreaccdemotest"
+      storage_account_name = "devstoreabcstatefile"
       container_name       = "aztffilestore"
       key                  = "terraform.tfstate"
       use_oidc             = true
