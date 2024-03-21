@@ -21,7 +21,7 @@ spec:
             - containerPort: 80
       imagePullSecrets:
         - name: azacrforsas
-      imagePullPolicy: Always                         
+          imagePullPolicy: Always                         
          
 ---  
 apiVersion: v1
