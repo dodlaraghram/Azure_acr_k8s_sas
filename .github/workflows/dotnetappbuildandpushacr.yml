@@ -34,7 +34,7 @@ jobs:
 
     - name: docker login to push image
       run: |
-       docker login --username demoser --password IHRjEKJFKJ12NLrKcLHLXz8XCZZKsnAk4wMiYnelF3+ACRBP13oL azacrforsas.azurecr.io
+       docker login --username demotoken --password JrP9gBxhXNAb09nPKDFrRDYg1++yWE4LMmr4sBZFnf+ACRDZF2Uk azacrforsas.azurecr.io
 
     - name: Build the frontend image and push it to ACR
       uses: docker/build-push-action@v5
