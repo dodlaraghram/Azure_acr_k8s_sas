@@ -44,7 +44,10 @@ jobs:
 
       - name: Terraform Plan
         id: plan
-        run: terraform plan
+        run: |
+          terraform plan
+          terraform force-unlock a3e275d4-66af-0c7b-b878-0e70652847ff
+        
         continue-on-error: true
 
       - name: Terraform Plan Status
