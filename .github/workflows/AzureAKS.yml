@@ -76,11 +76,11 @@ jobs:
    #       dockerfile: Dockerfile.ci
    #       username: ${{ secrets.DOCKER_USERNAME }}
    #       password: ${{ secrets.DOCKER_PASSWORD }}
-   #   - name: Deploy Application
-   #     run: |
-   #      az aks get-credentials -n "cluster-gorgeous-manatee" -g "demorg-moved-fawn"
-   #      az aks update -n cluster-guided-crab -g demorg-mint-dolphin --attach-acr azacrforsas
-   #      kubectl apply -f ./AKSApp/demoappdeploy.yaml
+      - name: Deploy Application
+        run: |
+         az aks get-credentials -n "cluster-prime-egret" -g "demorg-grand-penguin"
+         az aks update -n cluster-prime-egret -g demorg-grand-penguin --attach-acr azacrforsas
+         kubectl apply -f ./AKSApp/demoappdeploy.yaml
    #       sleep 40
           
           
