@@ -9,7 +9,7 @@ resource "azurerm_container_registry" "demoacrsas" {
   identity {
         type = "UserAssigned"
         identity_ids = [
-          azurerm_user_assigned_identity.demorg.id
+          azurerm_user_assigned_identity.azacrforsas.id
         ]
       }
 
