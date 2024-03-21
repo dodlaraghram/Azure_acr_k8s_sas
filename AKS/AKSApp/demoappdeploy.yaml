@@ -36,4 +36,4 @@ spec:
     app: dotnetd
   ports:
     - port: 80
-      targetPort: 5000
+      targetPort: 80
