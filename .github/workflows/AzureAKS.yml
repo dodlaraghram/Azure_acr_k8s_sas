@@ -70,9 +70,8 @@ jobs:
    #       password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Deploy Application
         run: |
-         az aks update -n cluster-mighty-lionfish -g demorg-guiding-kite --attach-acr azacrforsas
-         az aks get-credentials -n "cluster-mighty-lionfish" -g "demorg-guiding-kite"
-          kubectl apply -f ./AKSApp/demoappdeploy.yaml
+         az aks get-credentials -n "cluster-welcome-aardvark" -g "demorg-awake-weasel"
+         kubectl apply -f ./AKSApp/demoappdeploy.yaml
    #       sleep 40
           
           
