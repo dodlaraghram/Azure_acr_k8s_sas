@@ -5,3 +5,9 @@ resource "azurerm_container_registry" "demoacrsas" {
   sku                 = "Basic"
  # admin_enabled       = true
 }
+identity {
+    type = "UserAssigned"
+    identity_ids = [
+      azurerm_user_assigned_identity.demorg-moved-fawn.id
+    ]
+  }
