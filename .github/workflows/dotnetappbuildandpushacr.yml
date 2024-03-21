@@ -40,7 +40,7 @@ jobs:
       uses: docker/build-push-action@v5
       with:
         push: true
-        tags: ${{ secrets.REGISTRY_LOGIN_SERVER }}/welcometodotnet:v1
+        tags: ${{ secrets.REGISTRY_LOGIN_SERVER }}/app1/welcometodotnet:v1
         file: build/Dockerfile
 
 
