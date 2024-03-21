@@ -32,10 +32,9 @@ jobs:
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
 
-#    - name: attaching acr to aks
-#      run: |
-    
-#       az aks update -n cluster-premium-glider -g demorg-rare-pelican --attach-acr azacrforsas 
+    - name: docker login to push image
+      run: |
+       docker login --username demoser --password-IHRjEKJFKJ12NLrKcLHLXz8XCZZKsnAk4wMiYnelF3+ACRBP13oL myregistry.azurecr.io
 
     - name: Build the frontend image and push it to ACR
       uses: docker/build-push-action@v5
