@@ -6,12 +6,6 @@ resource "azurerm_container_registry" "demoacrsas" {
  # admin_enabled       = true
 
 
-  identity {
-        type = "UserAssigned"
-        identity_ids = [
-          azurerm_user_assigned_identity.demoacrsas.id
-        ]
-      }
-
+  
 }
   
