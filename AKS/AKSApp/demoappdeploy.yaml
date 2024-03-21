@@ -19,8 +19,8 @@ spec:
           image: azacrforsas.azurecr.io/welcometodotnet:v1
           ports:
             - containerPort: 80
-          imagePullSecrets:
-            - name: azacrforsas
+         # imagePullSecrets:
+         #   - name: azacrforsas
         #      imagePullPolicy: Always                         
          
 ---  
