@@ -72,11 +72,11 @@ jobs:
    #       dockerfile: Dockerfile.ci
    #       username: ${{ secrets.DOCKER_USERNAME }}
    #       password: ${{ secrets.DOCKER_PASSWORD }}
-   #   - name: Deploy Application
-   #     run: |
-   #      az aks get-credentials -n "cluster-welcome-aardvark" -g "demorg-awake-weasel"
-   #      kubectl create secret docker-registry azacrforsas --namespace default --docker-server=azacrforsas.azurecr.io --docker-username=091fd078-3ba1-4aba-82f9-4cf3b28038a2 --docker-password=II~8Q~SD-ChEEE_LHX6VjjfcgS2WlPy4-VFvybb~
-   #      kubectl apply -f ./AKSApp/demoappdeploy.yaml
+      - name: Deploy Application
+        run: |
+         az aks get-credentials -n "cluster-welcome-aardvark" -g "demorg-awake-weasel"
+         kubectl create secret docker-registry azacrforsas --namespace default --docker-server=azacrforsas.azurecr.io --docker-username=091fd078-3ba1-4aba-82f9-4cf3b28038a2 --docker-password=II~8Q~SD-ChEEE_LHX6VjjfcgS2WlPy4-VFvybb~
+         kubectl apply -f ./AKSApp/demoappdeploy.yaml
    #       sleep 40
           
           
