@@ -60,6 +60,10 @@ jobs:
 
       - name: Terraform Output
         run: terraform output
+        
+      - name: enable acr admin user
+        run: |
+           az acr update -n azacrforsas --admin-enabled true
 
  
    #   - uses: mr-smithers-excellent/docker-build-push@v6
