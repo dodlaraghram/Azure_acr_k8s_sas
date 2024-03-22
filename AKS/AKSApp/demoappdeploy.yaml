@@ -27,7 +27,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: dotnetd-loadbalancer-service
+  name: dotnetd-ClusterIP-service
   labels:
     app: dotnetd
 spec:
@@ -37,3 +37,22 @@ spec:
   ports:
     - port: 80
       targetPort: 5000
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx-ingress-service
+  annotation:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+    - http:
+       paths:
+         - path: /
+           pathType: Prefix
+           backend:
+            service: dotnetd-ClusterIP-service
+              name:
+              port:
+                name:
+                number:
