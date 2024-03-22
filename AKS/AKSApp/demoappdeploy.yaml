@@ -18,7 +18,7 @@ spec:
         - name: dotnetd
           image: azacrforsas.azurecr.io/app1/welcometodotnet:v1
           ports:
-            - containerPort: 80
+            - containerPort: 5000
      # imagePullSecrets:
      #   - name: azacrforsas
         #  imagePullPolicy: Always                         
@@ -27,32 +27,32 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: dotnetd-clusterip-service
+  name: dotnetd-lb-service
   labels:
     app: dotnetd
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
     app: dotnetd
   ports:
     - port: 80
       targetPort: 5000
 ---
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: nginx-ingress-service
-  annotation:
-    kubernetes.io/ingress.class: nginx
-spec:
-  rules:
-    - http:
-       paths:
-         - path: /
-           pathType: Prefix
-           backend:
-            service: dotnetd-clusterip-service
-              name:
-              port:
-                name:
-                number: 80
+#apiVersion: networking.k8s.io/v1
+#kind: Ingress
+#metadata:
+#  name: nginx-ingress-service
+#  annotation:
+#    kubernetes.io/ingress.class: nginx
+#spec:
+#  rules:
+#    - http:
+#       paths:
+#         - path: /
+#           pathType: Prefix
+#           backend:
+#            service: dotnetd-clusterip-service
+#              name:
+#              port:
+#                name:
+ #               number: 80
