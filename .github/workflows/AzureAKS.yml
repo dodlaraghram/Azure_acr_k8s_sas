@@ -87,7 +87,7 @@ jobs:
         run: |   
            kubectl create namespace ingress-sas
            helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
-           helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+           helm repo add stable https://charts.helm.sh/stable/
            helm repo update
 
            helm install ingress-nginx ingress-nginx/ingress-nginx --namespace ingress-sas --set controller.replicaCount=2 --set controller.nodeSelector."beta\.kubernetes\io/os"=linux --set defaultBackend.nodeSelector."beta\.kubernetes\io/os"=linux --set controller.service.externalTrafficPolicy=local --set controller.service.loadBalancerIP="20.235.141.9"
