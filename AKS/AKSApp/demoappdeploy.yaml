@@ -51,7 +51,7 @@ spec:
          - path: /
            pathType: Prefix
            backend:
-            service: dotnetd-ClusterIP-service
+            service: dotnetd-clusterip-service
               name:
               port:
                 name:
