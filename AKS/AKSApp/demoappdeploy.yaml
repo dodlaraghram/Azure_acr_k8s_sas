@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:
-        app: dotnetd
+       app: dotnetd
     spec:
       containers:
         - name: dotnetd
