@@ -27,7 +27,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: dotnetd-ClusterIP-service
+  name: dotnetd-clusterip-service
   labels:
     app: dotnetd
 spec:
