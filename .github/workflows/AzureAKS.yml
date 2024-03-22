@@ -80,8 +80,8 @@ jobs:
   #      run: |
   #       az login
   #       az account set --subscription ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-  #       az aks get-credentials -n "cluster-prime-egret" -g "demorg-grand-penguin"
-  #       az aks update -n cluster-prime-egret -g demorg-grand-penguin --attach-acr azacrforsas
+  #       az aks get-credentials -n "cluster-mutual-mayfly" -g "demorg-careful-kingfish"
+  #       az aks update -n cluster-mutual-mayfly -g demorg-careful-kingfish --attach-acr azacrforsas
   #       kubectl apply -f ./AKSApp/demoappdeploy.yaml
    #       sleep 40
           
