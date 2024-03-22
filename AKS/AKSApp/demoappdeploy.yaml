@@ -55,4 +55,4 @@ spec:
               name:
               port:
                 name:
-                number:
+                number: 80
