@@ -1,18 +1,18 @@
-#apiVersion: networking.k8s.io/v1
-#kind: Ingress
-#metadata:
-#  name: nginx-ingress-service
-#  annotation:
-#    kubernetes.io/ingress.class: nginx
-#spec:
-#  rules:
-#    - http:
-#       paths:
-#         - path: /
-#           pathType: Prefix
-#           backend:
-#            service: dotnetd-cip-service
-#              name:
-#              port:
-#                name:
- #               number: 80
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx-ingress-service
+  annotation:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+    - http:
+       paths:
+         - path: /
+           pathType: Prefix
+           backend:
+            service: dotnetd-cip-service
+              name:
+              port:
+                name:
+                number: 80
