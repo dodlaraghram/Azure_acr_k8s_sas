@@ -27,11 +27,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: dotnetd-lb-service
+  name: dotnetd-cip-service
   labels:
     app: dotnetd
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: dotnetd
   ports:
