@@ -76,13 +76,13 @@ jobs:
    #       dockerfile: Dockerfile.ci
    #       username: ${{ secrets.DOCKER_USERNAME }}
    #       password: ${{ secrets.DOCKER_PASSWORD }}
-      - name: Deploy Application
-        run: |
-         az login
-         az account set --subscription ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-         az aks get-credentials -n "cluster-heroic-cheetah" -g "demorg-heroic-heron"
-         az aks update -n cluster-heroic-cheetah -g demorg-heroic-heron --attach-acr azacrforsas
-         kubectl apply -f ./AKSApp/demoappdeploy.yaml
+#      - name: Deploy Application
+#        run: |
+#         az login
+#         az account set --subscription ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+#         az aks get-credentials -n "cluster-heroic-cheetah" -g "demorg-heroic-heron"
+#         az aks update -n cluster-heroic-cheetah -g demorg-heroic-heron --attach-acr azacrforsas
+#         kubectl apply -f ./AKSApp/demoappdeploy.yaml
    #   - name: install Ingress Contoller
    #     run: |   
    #        kubectl create namespace ingress-sas
