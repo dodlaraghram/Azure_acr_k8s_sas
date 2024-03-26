@@ -80,24 +80,24 @@ jobs:
         run: |
          az login
          az account set --subscription ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-    #     az aks get-credentials -n $AKS_NAME -g $aksrg_name
-    #     az aks update -n $AKS_NAME -g $aksrg_name --attach-acr $acr_name
-    #     kubectl apply -f ./AKSApp/demoappdeploy.yaml
-   #   - name: install Ingress Contoller
-   #     run: |   
-   #        kubectl create namespace ingress-sas
-   #        helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
-   #       helm repo add stable https://charts.helm.sh/stable/
-   #        helm repo update
+         az aks get-credentials -n $AKS_NAME -g $aksrg_name
+         az aks update -n $AKS_NAME -g $aksrg_name --attach-acr $acr_name
+         kubectl apply -f ./AKSApp/demoappdeploy.yaml
+      - name: install Ingress Contoller
+        run: |   
+           kubectl create namespace ingress-sas
+           helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+           helm repo add stable https://charts.helm.sh/stable/
+           helm repo update
 
-   #        helm install ingress-nginx ingress-nginx/ingress-nginx --namespace ingress-sas --set controller.replicaCount=2 --set controller.nodeSelector."beta\.kubernetes\io/os"=linux --set defaultBackend.nodeSelector."beta\.kubernetes\io/os"=linux --set controller.service.externalTrafficPolicy=Local
+           helm install ingress-nginx ingress-nginx/ingress-nginx --namespace ingress-sas --set controller.replicaCount=2 --set controller.nodeSelector."beta\.kubernetes\io/os"=linux --set defaultBackend.nodeSelector."beta\.kubernetes\io/os"=linux --set controller.service.externalTrafficPolicy=Local --set controller.service.loadBalancerIP="4.247.29.19"
           
-   #        kubectl apply -f ./AKSApp/demoappdeploy.yaml
+           kubectl apply -f ./AKSApp/demoappdeploy.yaml
    #       sleep 40
           
           
      
    #  # kubectl create secret docker-registry azacrforsas --namespace default --docker-server=azacrforsas.azurecr.io --docker-username=091fd078-3ba1-4aba-82f9-4cf3b28038a2 --docker-password=II~8Q~SD-ChEEE_LHX6VjjfcgS2WlPy4-VFvybb~
-      # --set controller.service.loadBalancerIP="20.235.141.9" 
+      # 
       
 
