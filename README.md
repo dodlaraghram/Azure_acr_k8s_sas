@@ -34,8 +34,18 @@ uses:
 
 
  # Ingress:
+    created an ingress controller with namespace ingress-sas 
+    created ingress deployment, ClusterIP internal service by exposing port 5000 as external port
+    created ingressservice.yml manifest with exposing 80 to outside world.
    - An API object that manages external access to the services in a cluster, typically HTTP.
 ![image](https://github.com/dodlaraghram/Azure_acr_k8s_sas/assets/113520166/438fb7ff-7b93-4038-bcaa-dfd26181d878)
+
+
+
+Output:
+ the output after deploying to k8s will look as ![image](https://github.com/dodlaraghram/Azure_acr_k8s_sas/assets/113520166/f9d00670-c4d8-4e5d-b6cc-50f64be809fa)
+ 
+
 
  
 
