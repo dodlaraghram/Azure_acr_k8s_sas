@@ -31,7 +31,12 @@ uses:
 - Created the Dockerfile- The Dockerfile file is used by the docker build command to create a container image. This 
   file is a text file named Dockerfile that doesn't have an extension.
 - Created a container and pushed to acr.
- 
+
+
+ # Ingress:
+   - An API object that manages external access to the services in a cluster, typically HTTP.
+![image](https://github.com/dodlaraghram/Azure_acr_k8s_sas/assets/113520166/438fb7ff-7b93-4038-bcaa-dfd26181d878)
+
  
 
 
