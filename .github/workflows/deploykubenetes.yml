@@ -36,7 +36,7 @@ jobs:
           az account set --subscription ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           az aks get-credentials -n cluster-smart-snapper -g demorg-careful-pipefish
           az aks update -n cluster-smart-snapper -g demorg-careful-pipefish --attach-acr azacrforsas
-          kubectl apply -f ./AKSApp/demoappdeploy.yaml
+       #   kubectl apply -f ./AKSApp/demoappdeploy.yaml
         
       - name: install Ingress Contoller
         run: |   
