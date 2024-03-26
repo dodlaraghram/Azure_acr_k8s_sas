@@ -13,6 +13,11 @@ created app registration azaksforsas and authenticated the same with azure to gi
 4) Integration with other services such as AKS etc.
 5) Security and compliance.
 
+# Store Backend State in Azure Storage Account:
+ 1.Created Azure Storage Account manually.
+ 2.Configured Terraform Backend to use Azure Storage Account.
+ 3.Run Terraform Commands to store the state file in remote location for use of ather autherized usage.
+
 # Authenticate with an Azure container registry:
 Repository-scoped access token: A token along with a generated password lets the user authenticate with the registry. You can set an expiration date for a token password, or disable a token at any time.
 uses: 
