@@ -44,6 +44,9 @@ uses:
 
 Output:
  the output after deploying to k8s will look as ![image](https://github.com/dodlaraghram/Azure_acr_k8s_sas/assets/113520166/f9d00670-c4d8-4e5d-b6cc-50f64be809fa)
+
+ Conclusion:
+ Leveraging Kubernetes alongside Azure contasiner registry(ACR) within github actions has proven to be a robust solution for automating the deployment process of containerized applications. By seamlessly integrating these tools, we have achived efficient CICD pipelines ensrin rapid, reliable and scalable deployments. The combination of Kubernetes orchestration capabilities and ACR secure and high performance cotainer registry has significantly enhances our development workflow.
  
 
 
