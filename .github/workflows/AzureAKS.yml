@@ -80,8 +80,8 @@ jobs:
         run: |
          az login
          az account set --subscription ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-    #     az aks get-credentials -n "cluster-clever-cricket" -g "demorg-immune-snapper"
-    #     az aks update -n cluster-clever-cricket -g demorg-immune-snapper --attach-acr azacrforsas
+    #     az aks get-credentials -n $AKS_NAME -g $aksrg_name
+    #     az aks update -n $AKS_NAME -g $aksrg_name --attach-acr $acr_name
     #     kubectl apply -f ./AKSApp/demoappdeploy.yaml
    #   - name: install Ingress Contoller
    #     run: |   
