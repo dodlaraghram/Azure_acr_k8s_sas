@@ -15,4 +15,4 @@ spec:
               name:
               port:
                 name:
-                number: 80
+                number: 5000
