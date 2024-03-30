@@ -40,13 +40,16 @@ jobs:
         
       - name: install Ingress Contoller
         run: |   
-           kubectl create namespace ingress-sas
+           kubectl create namespace ingress-basic
            helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
            helm repo add stable https://charts.helm.sh/stable/
            helm repo update
-           helm upgrade --install ingress-nginx ingress-nginx --repo https://kubernetes.github.io/ingress-nginx  --namespace  ingress-sas --create-namespace --set controller.service.loadBalancerIP="4.247.29.19"
-      
+
+           helm install ingress-nginx ingress-nginx/ingress-nginx --namespace ingress-basic --set controller.replicaCount=2 --set controller.nodeSelector."beta\.kubernetes\.io/os"=linux --set defaultBackend.nodeSelector."beta\.kubernetes\.io/os"=linux --set controller.service.externalTrafficPolicy=Local --set controller.service.loadBalancerIP="4.247.29.16"
            kubectl apply -f ./AKSApp/demoappdeploy.yaml
+        #   helm upgrade --install ingress-nginx ingress-nginx --repo https://kubernetes.github.io/ingress-nginx  --namespace  ingress-sas --create-namespace --set controller.service.loadBalancerIP="4.247.29.19"
+      
+          
       #     helm install ingress-nginx ingress-nginx/ingress-nginx --namespace ingress-sas --set controller.replicaCount=2 --set controller.nodeSelector."beta\.kubernetes\io/os"=linux --set defaultBackend.nodeSelector."beta\.kubernetes\io/os"=linux --set controller.service.externalTrafficPolicy=Local --set controller.service.loadBalancerIP="4.247.29.19"
                 
       #     kubectl apply -f ./AKSApp/demoappdeploy.yaml
